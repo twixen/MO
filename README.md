@@ -1,4 +1,4 @@
-MO
+Metody Obliczeniowe
 ==
-
-Metody obliczeniowe
+dr Danuta Jaruszewska-Walczak
+--
