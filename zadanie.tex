@@ -1,0 +1,54 @@
+\documentclass[11pt]{article}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\title{\textbf{Zadanie 1}}
+\author{Damian Soliński\\
+		Piotr Kulas\\
+		Marek Skiba}
+\date{15.10.2012}
+\begin{document}
+
+\maketitle
+
+\section{Treść zadania}
+
+Ustalić liczbę naturalną n$_{max}$. Wczytać n $\in$ \{0,1,...,n$_{max}$\} oraz wartości A$_{0}$,A$_{1}$,...,A$_{n}$. Następnie, dopóki "użytkownik się nie znudzi", wczytywać x$_{0}$ $\in$ $\mathbf{R}$ i wyznaczać w postaci ogólnej wielomian W = W(x) stopnia co najwyżej n taki, że $W^{(i)}$(x$_{0}$)=A$_{i}$,  i=0,1,...,n.  
+\section{Schemat rozwiązywania zadania}
+Ustalamy n$_{max}$. Wczytujemy wartości A$_{0}$,A$_{1}$,...,A$_{n}$, następnie wczytujemy x$_{0}$. Układ n równań liniowych o n niewiadomych ma postać :  \newline
+W$^{(0)}$ (x) = B$_{n}$x$^{n}$+ B$_{n-1}$x$^{n-1}$+...+ B$_{1}$x$^{1}$+ B$_{0}$x$^{0}$ = A$_{0}$ \newline
+W$^{(1)}$ (x) = (B$_{n}$x$^{n}$)$^{(1)}$+ (B$_{n-1}$x$^{n-1}$)$^{(1)}$+...+ (B$_{1}$x$^{1}$)$^{(1)}$ = A$_{1}$ \newline
+W$^{(2)}$ (x) = (B$_{n}$x$^{n}$)$^{(2)}$+ (B$_{n-1}$x$^{n-1}$)$^{(2)}$+...+ (B$_{2}$x$^{2}$)$^{(2)}$ = A$_{2}$ \newline
+. \newline . \newline . \newline
+W$^{(n-1)}$ (x) = (B$_{n}$x$^{n}$)$^{(n-1)}$+ (B$_{n-1}$x$^{n-1}$)$^{(n-1)}$ = A$_{n-1}$ \newline
+W$^{(n)}$ (x) = (B$_{n}$x$^{n}$)$^{(n)}$= A$_{n}$ \newline
+\newline Dla każdego działania (B$_{k}$x$^{k}$)$^{(i)}$ gdzie k$<$i wynik jest równy 0 i jest pominięte w układzie równań. \newline Licząc od ostatniego równania możemy łatwo uzyskać wyniki naszych niewiadomych A$_{0}$,A$_{1}$,...,A$_{n}$.
+\section{Przykładowe rozwiązanie}
+Niech n$_{max}$ = 3. Wczytujemy następne dane : \newline
+\centerline{A$_{0}$=1,A$_{1}$=2,A$_{2}$=3A$_{3}$=6,x$_{0}$=2}
+\newline \newline Powstaje układ równań : \newline 
+B$_{3}$x$^{3}$+B$_{2}$x$^{2}$+B$_{1}$x$^{1}$+ B$_{0}$x$^{0}$ = 1 \newline
+3B$_{3}$x$^{2}$+2B$_{2}$x$^{1}$+B$_{1}$x$^{0}$+ 0 = 2 \newline 
+6B$_{3}$x$^{1}$+2B$_{2}$x$^{0}$+0+ 0 = 4 \newline
+6B$_{3}$x$^{0}$+0+0+ 0 = 6 \newline \newline 
+Podstawiamy x$_{0}$ w miejsce x : \newline
+B$_{3}$*8+B$_{2}$*4+B$_{1}$*2+ B$_{0}$ = 1 \newline
+3B$_{3}$*4+2B$_{2}$*2+B$_{1}$ = 2 \newline 
+6B$_{3}$*2+2B$_{2}$ = 4 \newline
+6B$_{3}$= 6 \newline \newline 
+Liczymy od końca : \newline
+B$_{3}$ = $\frac {6}{6}$ = 1 \newline
+12 * 1 + 2B$_{2}$ = 4 \newline
+2B$_{2}$ = -8 \newline
+B$_{2}$ = -4 \newline
+3*1*4+2*(-4)*2+B$_{1}$ = 2 \newline
+12-16+B$_{1}$ = 2 \newline
+B$_{1}$=6 \newline
+1*8+(-4)*4+6*2+ B$_{0}$ = 1 \newline
+8-16+12+B$_{0}$=1 \newline
+4+B$_{0}$=1 \newline
+B$_{0}$=-3 \newline
+\newline
+Rozwiązaniem zadania jest : \newline
+\centerline {W(x)=x$^{3}$-4x$^{2}$+6x-3}
+
+\end{document}
