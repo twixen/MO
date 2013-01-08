@@ -9,7 +9,8 @@ int main() {
     double heun = 0;
     double x = 1;
     scanf("%lf", &k);
-    while (x < 3) {
+    printf("      x        f(x)      euler       blad       heun       blad  \n");
+    while (x + k <= 3) {
         euler += fdifferential(x, euler) * k;
         heun += (fdifferential(x, heun) + fdifferential(x + k, heun + fdifferential(x, heun) * k)) * k / 2;
         x += k;
