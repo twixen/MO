@@ -60,12 +60,14 @@ $df(x) = e^{x} + 1$\newline
 $x_{0} = a = -3$\newline
 $x_{1} = -3 - \frac{f(-3)}{df(-3)} = -2,09485175$\newline
 $f(x_{1}) = -0,950212932$\newline
-$x_{2} = -2,09485175 - \frac{f(-2,09485175}{df(-2,09485175)} = -2,11999379$\newline
+$x_{2} = -2,09485175 - \frac{f(-2,09485175)}{df(-2,09485175)} = -2,11999379$\newline
 $f(x_{2}) = 0,000038583910$\newline
 \newline
 Osiagneliśmy oczekiwane przybliżenie, pierwiastkiem równania $f(x)$ w podanym przedziale jest $x= -2,11999379$
 
-\clearpage
+\section{Opis działania:} 
+Na początku program zapyta o przedział ($a$ i $b$). $A$ powinno byc mniejsze od $B$, wartość funkcji w tych punktach musi mieć różny znak. Przy wprowadzeniu błędnych wartości, program będzie pytał aż do skutku. Następnie program spyta o podanie przybliżenia, z przedziałniu od 0 do 1. Po tym kroku wyświetli się wynik znaleziony dwiema metodami (połowenia i Newtona). W kolejnym etapie program zapyta się o chęć wprowadzenia kolejnej wartości przybliżenia. Można odmówić wpisując $nie$, i wtedy program kończy działanie, albo wpisać $tak$ i podać kolejne przybliżenie.
+
 \section{Źródło programu:}
 \lstset{language=C, basicstyle=\footnotesize, inputencoding=utf8,
 literate={ą}{{\k{a}}}1 
@@ -194,30 +196,32 @@ literate={ą}{{\k{a}}}1
 }\begin{lstlisting}
 [mskiba@sigma] ~/MetodyObliczeniowe $ g++ zad2.cpp -o zad2
 [mskiba@sigma] ~/MetodyObliczeniowe $ ./zad2
+Podaj a: 10
+Podaj b: 11
+błąd: f(a) i f(b) muszą mieć różny znak
+Podaj a: 11
+Podaj b: 10
+błąd: a musi być mniejsze od b
 Podaj a: -3
 Podaj b: -2
+Podaj przybliżenie: 2
+Chcesz podać kolejne przybliżenie? (tak/nie): tak
 Podaj przybliżenie: 0.01
+
 Metoda połowienia:
-x = -2.1250000000000000, 
-f(x) = -0.0055670317332805, 
-kroki: 2.
+x = -2.1250000000000000, f(x) = -0.0055670317332805, Kroki: 2
 
 Metoda Newtona:
-x = -2.1199937939314832,
-f(x) = 0.0000385795067956,
-kroki: 2.
+x = -2.1199937939314832, f(x) = 0.0000385795067956, Kroki: 2
 
 Chcesz podać kolejne przybliżenie? (tak/nie): tak
-Podaj przybliżenie: 0.001
+Podaj przybliżenie: 0.0001
+
 Metoda połowienia:
-x = -2.1191406250000000,
-f(x) = 0.0009942000281109,
-kroki: 8.
+x = -2.1201171875000000, f(x) = -0.0000996243708498, Kroki: 9
 
 Metoda Newtona:
-x = -2.1199937939314832,
-f(x) = 0.0000385795067956,
-kroki: 2.
+x = -2.1199937939314832, f(x) = 0.0000385795067956, Kroki: 2
 
 Chcesz podać kolejne przybliżenie? (tak/nie): nie
 [mskiba@sigma] ~/MetodyObliczeniowe $
