@@ -11,6 +11,7 @@ int main() {
     do {
         printf("Podaj krok całkowania z przedziału (0,1): ");
         scanf("%lf", &k);
+        if (k <= 0 || k >= 1) printf("Niepoprawny krok\n");
     } while (k <= 0 || k >= 1);
     printf("      x        f(x)      euler       błąd       heun       błąd  \n");
     while (x + k <= 3) {
