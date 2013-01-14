@@ -9,7 +9,7 @@ int main() {
     double heun = 0;
     double x = 1;
     do {
-        printf("Podaj krok całkowania z przedziału (0,1): \n");
+        printf("Podaj krok całkowania z przedziału (0,1): ");
         scanf("%lf", &k);
     } while (k <= 0 || k >= 1);
     printf("      x        f(x)      euler       błąd       heun       błąd  \n");
